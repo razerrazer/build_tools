@@ -42,8 +42,13 @@ parser.add_option("--vs-version", action="store", type="string", dest="vs-versio
 parser.add_option("--vs-path", action="store", type="string", dest="vs-path", default="", help="path to vcvarsall")
 parser.add_option("--siteUrl", action="store", type="string", dest="siteUrl", default="127.0.0.1", help="site url")
 parser.add_option("--multiprocess", action="store", type="string", dest="multiprocess", default="1", help="provides ability to specify single process for make")
+<<<<<<< HEAD
 parser.add_option("--sysroot", action="store", type="string", dest="sysroot", default="0", help="provides ability to use sysroot (ubuntu 16.04) to build c++ code. If value is \"1\", then the sysroot from tools/linux/sysroot will be used, and if it is not there, it will download it and unpack it. You can also set value as the path to the your own sysroot (rarely used). Only for linux")
 parser.add_option("--qemu-win-arm64-dir", action="store", type="string", dest="qemu-win-arm64-dir", default="", help="dir to qemu virtual machine for win_arm64 cross build. It should contains start.bat. More info in tools/win/qemu.")
+=======
+parser.add_option("--repo-overrides", action="store", type="string", dest="repo-overrides", default="", help="Comma-separated list of repo=url overrides, e.g. server=https://github.com/me/custom-server.git")
+parser.add_option("--repo-branch-overrides", action="store", type="string", dest="repo-branch-overrides", default="", help="Comma-separated list of repo=branch overrides, e.g. server=feature/new-api")
+>>>>>>> f88a3ba (Repos and branches individual overrides.)
 
 (options, args) = parser.parse_args(arguments)
 configOptions = vars(options)
