@@ -57,7 +57,7 @@ def install_qt():
   return
   
 def install_qt_prebuild():
-  url_amd64 = "https://download.qt.io/new_archive/qt/5.9/5.9.9/single/qt-everywhere-opensource-src-5.9.9.tar.xz", "./qt_source_5.9.9.tar.xz"
+  url_amd64 = "https://s3.eu-west-1.amazonaws.com/static-doc.teamlab.eu.com/qt/5.9.9/linux_amd64/qt_binary.7z", "./qt_source_5.9.9.tar.xz"
   base.download(url_amd64, "./qt_amd64.7z")
   base.extract("./qt_amd64.7z", "./qt_build")
   base.create_dir("./qt_build/Qt-5.9.9")
